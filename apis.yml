@@ -1,4 +1,5 @@
 aid: scotts-miracle-gro
+name: "The Scotts Miracle-Gro Company"
 specificationVersion: '0.23'
 accessModel:
   pricing: unknown
