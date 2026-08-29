@@ -1,0 +1,100 @@
+generated: '2026-08-28'
+method: probed
+source: >-
+  Live anonymous GET of each /.well-known/ path on every host associated with The Scotts
+  Miracle-Gro Company. No document was served on any host; this file records the absence.
+note: >-
+  NO document was found. Every path either 404s, is refused by the CDN edge (403), or —
+  on www.miraclegro.com — returns HTTP 200 carrying the Salesforce Commerce Cloud
+  (Demandware) "Technical Page" error template rather than a document. That soft-200 is a
+  catch-all, not a served well-known document: the identical 2,082-byte HTML body is
+  returned for /openapi.json, /llms.txt and every /.well-known/* path alike. Per the
+  pipeline contract no WellKnown or SecurityTxt pointer is emitted, because none of these
+  responses is a real document.
+hosts:
+  - host: scottsmiraclegro.com
+    note: Corporate + commerce site. Clean 404 on every well-known path.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+  - host: www.scotts.com
+    note: Brand storefront. Edge returns 403 to non-browser clients on all well-known paths.
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 403
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+        file: null
+      - path: /.well-known/api-catalog
+        status: 403
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 403
+        file: null
+  - host: www.miraclegro.com
+    note: >-
+      Brand storefront. Returns HTTP 200 for every path with the Demandware error
+      template (content-type text/html) — a soft-404, recorded as a miss, not a hit.
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: null
+        soft_404: true
+        content_type: text/html;charset=UTF-8
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: null
+        soft_404: true
+        content_type: text/html;charset=UTF-8
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: null
+        soft_404: true
+        content_type: text/html;charset=UTF-8
+      - path: /.well-known/api-catalog
+        status: 200
+        file: null
+        soft_404: true
+        content_type: text/html;charset=UTF-8
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        file: null
+        soft_404: true
+        content_type: text/html;charset=UTF-8
+  - host: api.scotts.com
+    note: >-
+      Cloudflare-fronted host that resolves but serves a 404 "Page not found" at the root
+      and on every API-discovery path probed. No public API is exposed here.
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 403
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+        file: null
+      - path: /.well-known/api-catalog
+        status: 403
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 403
+        file: null

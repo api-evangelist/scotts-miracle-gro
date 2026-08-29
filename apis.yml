@@ -1,5 +1,16 @@
 aid: scotts-miracle-gro
 name: "The Scotts Miracle-Gro Company"
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 specificationVersion: '0.23'
 accessModel:
   pricing: unknown
@@ -13,16 +24,70 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/scotts-miracle-gro.png
-url: 
+url: >-
   https://raw.githubusercontent.com/api-evangelist/scotts-miracle-gro/refs/heads/main/apis.yml
-modified: '2026-03-24'
+created: '2026-03-24'
+modified: '2026-08-28'
+tags:
+  - consumer-products
+  - lawn-and-garden
+  - manufacturing
+  - retail
+  - ecommerce
+  - agriculture
+  - home-and-garden
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+    url: https://apievangelist.com
 apis: []
 common:
   - type: LinkedIn
     url: https://www.linkedin.com/company/scottsmiraclegro
   - type: Website
-    url: https://www.scotts-miracle-gro.com
+    url: https://scottsmiraclegro.com
+  - type: Support
+    url: https://scottsmiraclegro.com/en-us/support/help-center/helpcenter.html
+  - type: TermsOfService
+    url: https://scottsmiraclegro.com/en-us/support/help-center/terms-conditions.html
+  - type: PrivacyPolicy
+    url: https://scottsmiraclegro.com/en-us/support/help-center/privacy.html
+  - type: DomainSecurity
+    url: security/scotts-miracle-gro-domain-security.yml
 description: >-
-  The Scotts Miracle-Gro Company is the world's largest marketer of branded consumer
-  lawn and garden products, with brands including Scotts, Miracle-Gro, Ortho, Roundup,
-  Tomcat, and Hawthorne.
+  The Scotts Miracle-Gro Company is the world's largest marketer of branded consumer lawn
+  and garden products, with brands including Scotts, Miracle-Gro, Ortho, Roundup and Tomcat.
+  It is a physical consumer-goods manufacturer and retailer: its digital surface is a
+  Salesforce Commerce Cloud storefront and corporate site at scottsmiraclegro.com, plus
+  end-user mobile apps. It publishes no developer program, no public API, and no
+  machine-readable contract. The one developer-facing surface it ever marketed — the open
+  API for the GRO connected smart-watering platform (Gro 7 Zone Controller, Gro Water
+  Sensors) — had its cloud service discontinued on 2021-12-30 and its hosts no longer
+  resolve. The Hawthorne Gardening Company subsidiary was divested to Vireo Growth in
+  April 2026 and is no longer part of this company's surface.
+x-enrichment:
+  date: '2026-08-28'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Scotts Miracle-Gro is a consumer lawn-and-garden goods manufacturer whose entire
+    digital surface is a Salesforce Commerce Cloud storefront; the only developer program
+    it ever marketed was the open API for the GRO smart-watering platform, whose cloud
+    service shut down 2021-12-30 and whose hosts (gro.scotts.com, mygro.com) no longer
+    resolve in DNS.
+  evidence:
+    - url: https://scottsmiraclegro.com/.well-known/api-catalog
+      status: 404
+    - url: https://scottsmiraclegro.com/openapi.json
+      status: 404
+    - url: https://api.scotts.com/openapi.json
+      status: 404
+    - url: https://scottsmiraclegro.com/.well-known/agent-card.json
+      status: 404
+    - url: https://api.github.com/orgs/scottsmiraclegro
+      status: 404
+  checked: '2026-08-28'
