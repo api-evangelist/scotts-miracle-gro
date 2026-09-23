@@ -1,7 +1,9 @@
 ---
 title: Scotts Miracle-Gro Halves Inventory with AI ...
 url: https://www.financialcontent.com/article/tokenring-2025-10-28-scotts-miracle-gro-halves-inventory-with-ai-revolutionizing-supply-chain-efficiency
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Scotts Miracle-Gro" press release artificial intelligence'
 position: 2
 source: serpapi-google

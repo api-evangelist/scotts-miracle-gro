@@ -1,7 +1,9 @@
 ---
 title: The Scotts Miracle-Gro Company Case Study
 url: https://cloud.google.com/customers/scotts-gcp
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Scotts Miracle-Gro" press release artificial intelligence'
 position: 3
 source: serpapi-google

@@ -1,7 +1,9 @@
 ---
 title: How Scotts Miracle-Gro evolves marketing as gardening ...
 url: https://www.marketingdive.com/news/how-scotts-miracle-gro-evolves-marketing-as-gardening-goes-year-round/815488/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Scotts Miracle-Gro" press release artificial intelligence'
 position: 5
 source: serpapi-google

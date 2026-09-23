@@ -1,7 +1,9 @@
 ---
 title: Scotts Miracle-Gro taps machine learning to solve ...
 url: https://www.supplychaindive.com/news/scotts-miracle-gro-ai-machine-learning-inventory-management/803934/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Scotts Miracle-Gro" press release artificial intelligence'
 position: 1
 source: serpapi-google

@@ -1,7 +1,9 @@
 ---
 title: ScottsMiracle-Gro Expands Controls Category with ...
 url: https://www.prnewswire.com/news-releases/scottsmiracle-gro-expands-controls-category-with-purchase-of-tomcat-consumer-business-227651131.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Scotts Miracle-Gro" press release artificial intelligence'
 position: 4
 source: serpapi-google
